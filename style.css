@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html, body {
+    -webkit-user-select: none; /* Prevenir selección de texto en navegadores webkit */
+    -ms-user-select: none; /* Prevenir selección de texto en IE10+ */
+    user-select: none; /* Prevenir selección de texto en navegadores modernos */
+    touch-action: manipulation; /* Desactivar el zoom de doble toque */
+}
+
+.flappy {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-image: url(/Absolute_Reality_v16_I_want_a_jungle_background_for_what_I_jus_0.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.flappy__contenedorPajaro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #hitbox {
+        position: relative;
+        top: 8rem;
+    }
+    .flappy__pajaro {
+        position: relative;
+        z-index: 10;
+        z-index: 3;
+        height: 3rem;
+        width: 3rem;
+        background-image: url(/pajaro2i8f0p0.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 100%;
+    }
+}
+
+.flappy__contenedorTuberias {
+    .flappy__tuberias {
+        display: flex;
+        position: relative;
+        left: 0px;
+        height: 100vh;
+        .flappy__grupoTuberias {
+            display: flex;
+        }
+        .flappy__parejaTuberias {
+            margin: 0 7rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .flappy__tuberiaSuperior {
+            height: 40vh;
+            width: 4rem;
+            background-image: url(/rojoplanta.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotateX(180deg);
+        }
+        .flappy__tuberiaInferior {
+            height: 44vh;
+            width: 4rem;
+            background-image: url(/rojoplanta.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .flappy__tuberiaSuperior--variante1 {
+            height: 45vh;
+        }
+        .flappy__tuberiaInferior--variante1 {
+            height: 39vh;
+        }
+        .flappy__tuberiaSuperior--variante2 {
+            height: 35vh;
+        }
+        .flappy__tuberiaInferior--variante2 {
+            height: 49vh;
+        }
+        .flappy__tuberiaSuperior--variante3 {
+            height: 55vh;
+        }
+        .flappy__tuberiaInferior--variante3 {
+            height: 29vh;
+        }
+        .flappy__grupoTuberias2{
+            display: flex;
+            margin-left: 4rem;
+        }
+    }
+}
+.flappy__cajaFinal {
+    position: relative;
+    z-index: 1;
+    margin-left: -160rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .flappy__final {
+        height: 20rem;
+        width: 20rem;
+        background-color: red;
+    }
+}
+
+.ocultado {
+    display: none;
+}
+
+.prueba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prueba2 {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+@keyframes opacidad {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes flappy {
+    0% {
+        transform: translateX(0);
+    }
+    16.66% {
+        transform: translateX(50px);
+    }
+    33.33% {
+        transform: translateX(100px);
+    }
+    50% {
+        transform: translateX(150px);
+    }
+    66.66% {
+        transform: translateX(100px);
+        transform: translateY(-50px);
+    }
+    83.33% {
+        transform: translateX(50px);
+        transform: translateY(0px);
+    }
+    90%{
+        transform: scaleY(2.5);
+        transform: scaleX(2.5);
+    }
+    100% {
+        transform: translateX(0);
+        transform: scaleY(0);
+        transform: scaleX(0);
+    }
+}
